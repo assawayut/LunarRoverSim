@@ -1,10 +1,12 @@
 # Lunar-Rover-Simulator
-This is the repository for the Lunar Rover Simulator test version, where only executable files exist. The full source code version will be released soon.
+(This is the repository for the Lunar Rover Simulator test version, where only executable files exist. The full source code version, with RL interface, will be released soon.)
+
+An open-source lunar rover simulator based on PyBullet aiming to serve as a tool to test the locomotion of rover on realistic lunar environment.  
 
 <img src='figure/sim_interface.gif' width=800>
 
 ## Installation
-This repo contains standalone executable files of the simulator with wrapped packages. So, further installation is not needed in this test version.
+This repository consists of self-contained executable simulator files bundled with all required packages. So, further installation is not required in this test version.
 
 Linux (tested on x64 Ubuntu 22.04)
 ```sh
@@ -32,11 +34,11 @@ Simulator GUI consists of the option to enable/disable each lunar environmental 
 
 
 Since the source code is currently not accessible, the parameters can be changed or adjusted only in YAML files.
-To change the terrain, as well as its dynamic properties, go to `init_config.yaml`, and change the number after `terrain_index` for the main type of terrain and/or after `terrain_index2` for the subtype of terrain.
+To change the lunar terrain, go to `init_config.yaml` and change the number after `terrain_index`, for the main type of terrain, and/or after `terrain_index2`, for the subtype of terrain. The properties of terrain can be modified under their corresponding terrain name.
 
 <img src="figure/init_config.png" width=400>
 
-To change the parameter values of lunar environment effect, go to `param_config.yaml`, and change the values after each parameter.
+To change the values of lunar environment parameter, go to `param_config.yaml` and change the values after each parameter.
 
 <img src="figure/param_config.png" width=400>
 
