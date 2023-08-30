@@ -1,0 +1,45 @@
+terrain_index: 0
+terrain_index2: 0
+
+# 0: Individual motor control, 1: Differential drive with suspension control
+control_mode: 1
+
+NASA Surface:
+  path: ["/terrain/moon_near_side.stl","/terrain/moon_far_side.stl"]
+  position: [0, 0, -1]
+  orientation: [0, 0, 0] # Euler
+  scale: [1,1,1]
+  lateral friction: 0.7
+  contact stiffness: 1000000
+  contact damping: 100000
+  rover position: [-1, -1.6, 1.7]
+
+de Gerlache low:
+  path: ["/terrain/site_011.obj","/terrain/site_04.obj","/terrain/site_01.obj"]
+  position: [375, -150, 10]
+  orientation: [0, 0, 0]
+  scale: [0.01,0.01,0.01]
+  lateral friction: 0.7
+  contact stiffness: 50000
+  contact damping: 1000
+  rover position: [0, 0, 30]
+
+South pole:
+  path: ["/terrain/moon_south_pole.stl"]
+  position: [0, 0, 10]
+  orientation: [1.57, 0, 0]
+  scale: [0.001,0.001,0.001]
+  lateral friction: 0.9
+  contact stiffness: 150000
+  contact damping: 1000
+  rover position: [0, 0, 12]
+
+Oaisys:
+  path: ["/terrain/TSS_batch_0002.stl","/terrain/TSS_batch_0001_big4.stl"]
+  position: [0, 0, -1]
+  orientation: [0, 0, 0]
+  scale: [0.3, 0.3, 0.3]
+  lateral friction: 0.7
+  contact stiffness: 100000
+  contact damping: 100
+  rover position: [-1, -1.6, 8]

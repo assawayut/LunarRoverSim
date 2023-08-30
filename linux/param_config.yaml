@@ -1,0 +1,34 @@
+soil:
+  pressure_sinkage_modulus_cohesion_stress: 100000
+  pressure_sinkage_modulus_internal_friction: 1000
+  exponent_sinkage: 1.1
+  soil_cohesion: 462.300
+  internal_friction: 0.3889
+  n0: 0.92
+  n1: 0.5
+  shearing_deformation: 0.015
+  lateral_shear_deformation_modulus: 0.015
+
+temperature:
+
+  # ECX TORQUE 22 XL 22mm Brushless Sensorless
+  temperature_coefficient_rotor: [0.0038, 0.0037, 0.0040, 0.0043, 0.00651] # Ag, Au, Cu, Al, Fe (/Celsius)
+  temperature_coefficient_magnet: [-0.0020, -0.0004, -0.0002, -0.0012] # Ceramic, SmCo, AlNiCo, NdFeB (/Celsius)
+  winding_resistance: [0.292, 0.757, 1.24, 2.87, 4.13] # 12, 18,24, 36, 48 V (Ohm)
+  torque_constant: [17.0e-3, 28.3e-3, 37.7e-3, 54.6e-3, 71.6e-3] # 12, 18,24, 36, 48 V (Nm/A)
+  stall_torque: [696.0e-3, 672.0e-3, 730.0e-3, 685.0e-3, 832.0e-3] # 12, 18,24, 36, 48 V (Nm)
+  stall_current: [41.1, 23.8, 19.4, 12.5, 11.6] # 12, 18,24, 36, 48 V (A)
+  no_load_current: [224.0e-3, 129.0e-3, 96.8e-3, 67.6e-3, 52.0e-3] # 12, 18,24, 36, 48 V (A)
+  thermal_resistance_housing_ambient: 10.9 # K/W
+  thermal_resistance_winding_housing: 2.46 # K/W
+
+  #Planetary Gearhead GPX26HP 26mm 4-stage
+  Gear_reduction_stage2: [16, 21, 26, 28, 35]
+  Gear_reduction_stage3: [62, 83, 103, 111, 138, 150, 172, 186, 231]
+  Gear_reduction_stage4: [243, 326, 406, 439, 546, 590, 679, 734, 794, 913, 987, 1135, 1227, 1526]
+
+  # NOTE: Thermal resistance can be changed (and thus time constant) depending on the heat sink used
+
+  C_NdFeB: 440 # J/kg-Celsius
+
+  index: 0
