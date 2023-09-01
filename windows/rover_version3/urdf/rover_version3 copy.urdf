@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="rover_version3">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0797596776154861 0.159749232708683 0.220782525461507"
+        rpy="0 0 0" />
+      <mass
+        value="20" />
+      <inertia
+        ixx="0.00103089461973595"
+        ixy="1.35681396229077E-10"
+        ixz="-1.49365547296381E-08"
+        iyy="0.00456020502866032"
+        iyz="1.37219337455197E-19"
+        izz="0.00496170968770875" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://viper/obj/viper_chassis.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://viper/obj/viper_chassis.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="LF_sus_link">
+    <inertial>
+      <origin
+        xyz="0.6418 0.2067 0.0525"
+        rpy="0 0 0" />
+      <mass
+        value="3" />
+      <inertia
+        ixx="1.1461723176048E-05"
+        ixy="-2.68406691396172E-07"
+        ixz="1.63686839635996E-06"
+        iyy="1.80050461034318E-05"
+        iyz="-1.20786843415189E-06"
+        izz="1.75970503245523E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://viper/obj/viper_L_bt_sus.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://viper/obj/viper_L_bt_sus.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LF_sus_joint"
+    type="revolute">
+    <origin
+      xyz="0.16666 0.24388 0.20605"
+      rpy="0 0.0073225 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="LF_sus_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-0.7"
+      upper="0.7"
+      effort="5"
+      velocity="1" />
+    <dynamics damping="0.1" friction="0.3125"/>
+  </joint>
+  <link
+    name="LF_steer_link">
+    <inertial>
+      <origin
+        xyz="0.6418 6067 0.0"
+        rpy="0 0 0" />
+      <mass
+        value="1" />
+      <inertia
+        ixx="1.35851685717712E-05"
+        ixy="-1.09983746723962E-07"
+        ixz="1.42857893027883E-07"
+        iyy="1.18047874893425E-05"
+        iyz="2.32545470303457E-06"
+        izz="3.46928434336137E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://viper/obj/viper_L_steer.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://viper/obj/viper_L_steer.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LF_steer_joint"
+    type="revolute">
+    <origin
+      xyz="0.1104 0.062 0.016442"
+      rpy="0 0.21866 0" />
+    <parent
+      link="LF_sus_link" />
+    <child
+      link="LF_steer_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.2"
+      upper="0.2"
+      effort="10"
+      velocity="1" />
+    <dynamics damping="0.1" friction="0.3125"/>
+  </joint>
+  <link
+    name="LF_wheel_link">
+    <inertial>
+      <origin
+        xyz="0.000128860164909594 0.0250729972721997 0.00036393433755022"
+        rpy="0 0 0" />
+      <mass
+        value="5" />
+      <inertia
+        ixx="1.75353631469335E-05"
+        ixy="-1.10896528379914E-09"
+        ixz="1.48697799203701E-07"
+        iyy="2.65110723651584E-05"
+        iyz="-3.11653729024746E-09"
+        izz="1.79018535265846E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_version3/meshes/LF_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_version3/meshes/LF_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LF_wheel_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0011763 -0.019116 -0.10825"
+      rpy="0 -0.2264 -0.061459" />
+    <parent
+      link="LF_steer_link" />
+    <child
+      link="LF_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="10"
+      velocity="30" />
+    <dynamics damping="0.5" friction="1"/>
+  </joint>
+  <link
+    name="RF_sus_link">
+    <inertial>
+      <origin
+        xyz="0.0902489832880631 -0.0016018657685111 -0.0039597393124956"
+        rpy="0 0 0" />
+      <mass
+        value="3" />
+      <inertia
+        ixx="1.11589178190171E-05"
+        ixy="1.21681623087089E-07"
+        ixz="8.62915160690039E-07"
+        iyy="1.80050456540428E-05"
+        iyz="1.23133307205556E-06"
+        izz="1.78998560826054E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_version3/meshes/RF_sus_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_version3/meshes/RF_sus_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RF_sus_joint"
+    type="revolute">
+    <origin
+      xyz="0.16666 0.04062 0.20605"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RF_sus_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-0.7"
+      upper="0.7"
+      effort="5"
+      velocity="1" />
+    <dynamics damping="0.1" friction="0.3125"/>
+  </joint>
+  <link
+    name="RF_steer_link">
+    <inertial>
+      <origin
+        xyz="-0.00104793735848838 -0.0219232562132083 -0.0833418115306279"
+        rpy="0 0 0" />
+      <mass
+        value="1" />
+      <inertia
+        ixx="1.35878425466297E-05"
+        ixy="-8.56071267405509E-08"
+        ixz="-1.11055605351822E-07"
+        iyy="1.18021135144838E-05"
+        iyz="-2.32719028143076E-06"
+        izz="3.46928434336134E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_version3/meshes/RF_steer_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_version3/meshes/RF_steer_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RF_steer_joint"
+    type="revolute">
+    <origin
+      xyz="0.10763 -0.027 0.029557"
+      rpy="0 0.098502 0" />
+    <parent
+      link="RF_sus_link" />
+    <child
+      link="RF_steer_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.2"
+      upper="0.2"
+      effort="10"
+      velocity="1" />
+    <dynamics damping="0.1" friction="0.3125"/>
+  </joint>
+  <link
+    name="RF_wheel_link">
+    <inertial>
+      <origin
+        xyz="0.000295740339524175 -0.0250729973917038 -0.000248174677657836"
+        rpy="0 0 0" />
+      <mass
+        value="5" />
+      <inertia
+        ixx="1.77598239457965E-05"
+        ixy="2.53724039131848E-09"
+        ixz="-2.32359905280223E-07"
+        iyy="2.6511072421314E-05"
+        iyz="-2.12231215519111E-09"
+        izz="1.76773927751476E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://viper/obj/viper_cylwheel.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://viper/obj/viper_cylwheel.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RF_wheel_joint"
+    type="revolute">
+    <origin
+      xyz="0.00091489 0.01913 -0.10825"
+      rpy="0 -0.098614 -0.047789" />
+    <parent
+      link="RF_steer_link" />
+    <child
+      link="RF_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="10"
+      velocity="30" />
+   <dynamics damping="0.5" friction="1"/>
+  </joint>
+  <link
+    name="LH_sus_link">
+    <inertial>
+      <origin
+        xyz="-0.0897096627634609 0.0366018653962163 0.0106176683691153"
+        rpy="0 0 0" />
+      <mass
+        value="3" />
+      <inertia
+        ixx="1.10593915749623E-05"
+        ixy="-7.80907440373878E-08"
+        ixz="2.52617515382323E-07"
+        iyy="1.80050455136856E-05"
+        iyz="-1.23486411965248E-06"
+        izz="1.79993823530536E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_version3/meshes/LH_sus_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_version3/meshes/LH_sus_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LH_sus_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0074481 0.24388 0.20605"
+      rpy="0 -0.051859 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="LH_sus_link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-0.7"
+      upper="0.7"
+      effort="5"
+      velocity="1" />
+    <dynamics damping="0.1" friction="0.3125"/>
+  </joint>
+  <link
+    name="LH_steer_link">
+    <inertial>
+      <origin
+        xyz="0.00314887201868978 0.0217212324859138 -0.0833418115306286"
+        rpy="0 0 0" />
+      <mass
+        value="1" />
+      <inertia
+        ixx="1.35549978282775E-05"
+        ixy="-2.54757868846835E-07"
+        ixz="3.34074184238735E-07"
+        iyy="1.18349582328361E-05"
+        iyz="2.30576286571084E-06"
+        izz="3.46928434336134E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_version3/meshes/LH_steer_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_version3/meshes/LH_steer_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LH_steer_joint"
+    type="revolute">
+    <origin
+      xyz="-0.10147 0.062 0.046495"
+      rpy="0 0.063154 0" />
+    <parent
+      link="LH_sus_link" />
+    <child
+      link="LH_steer_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.2"
+      upper="0.2"
+      effort="10"
+      velocity="1" />
+    <dynamics damping="0.1" friction="0.3125"/>
+  </joint>
+  <link
+    name="LH_wheel_link">
+    <inertial>
+      <origin
+        xyz="0.00020925631318458 0.0250729952229727 -0.000324445436222232"
+        rpy="0 0 0" />
+      <mass
+        value="5" />
+      <inertia
+        ixx="1.76210396593133E-05"
+        ixy="-1.78846958383675E-09"
+        ixz="-2.14872751644477E-07"
+        iyy="2.65110708659707E-05"
+        iyz="2.78231532272225E-09"
+        izz="1.78161754809893E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_version3/meshes/LH_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_version3/meshes/LH_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LH_wheel_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0027481 -0.018954 -0.10825"
+      rpy="0 -0.011413 -0.14399" />
+    <parent
+      link="LH_steer_link" />
+    <child
+      link="LH_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="10"
+      velocity="30" />
+    <dynamics damping="0.5" friction="1"/>
+  </joint>
+  <link
+    name="RH_sus_link">
+    <inertial>
+      <origin
+        xyz="-0.0901499833953327 -0.00160186903191516 0.00589242165063225"
+        rpy="0 0 0" />
+      <mass
+        value="3" />
+      <inertia
+        ixx="1.10540732565972E-05"
+        ixy="1.31117875535546E-08"
+        ixz="-1.09985045755929E-07"
+        iyy="1.80050462823542E-05"
+        iyz="1.23726162686239E-06"
+        izz="1.80046996271622E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_version3/meshes/RH_sus_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_version3/meshes/RH_sus_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RH_sus_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0074481 0.04062 0.20605"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RH_sus_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.7"
+      upper="0.7"
+      effort="5"
+      velocity="1" />
+    <dynamics damping="0.1" friction="0.3125"/>
+  </joint>
+  <link
+    name="RH_steer_link">
+    <inertial>
+      <origin
+        xyz="-0.000757709530648687 -0.0219352048534746 -0.0833418115306277"
+        rpy="0 0 0" />
+      <mass
+        value="1" />
+      <inertia
+        ixx="1.35897954680785E-05"
+        ixy="-6.19465714802663E-08"
+        ixz="-8.02474526225233E-08"
+        iyy="1.1800160593035E-05"
+        iyz="-2.32845620526023E-06"
+        izz="3.46928434336153E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_version3/meshes/RH_steer_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_version3/meshes/RH_steer_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RH_steer_joint"
+    type="revolute">
+    <origin
+      xyz="-0.10378 -0.027 0.041102"
+      rpy="0 0.010597 0" />
+    <parent
+      link="RH_sus_link" />
+    <child
+      link="RH_steer_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.2"
+      upper="0.2"
+      effort="10"
+      velocity="1" />
+    <dynamics damping="0.1" friction="0.3125"/>
+  </joint>
+  <link
+    name="RH_wheel_link">
+    <inertial>
+      <origin
+        xyz="0.000255617884660497 -0.0250729975333933 -0.000289331209891608"
+        rpy="0 0 0" />
+      <mass
+        value="5" />
+      <inertia
+        ixx="1.76897775035031E-05"
+        ixy="2.19402544688414E-09"
+        ixz="-2.34219186721211E-07"
+        iyy="2.65110725420512E-05"
+        iyz="-2.47551282580446E-09"
+        izz="1.77474393376445E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_version3/meshes/RH_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_version3/meshes/RH_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RH_wheel_joint"
+    type="revolute">
+    <origin
+      xyz="0.00066164 0.01914 -0.10825"
+      rpy="0 -0.010604 -0.034554" />
+    <parent
+      link="RH_steer_link" />
+    <child
+      link="RH_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="10"
+      velocity="30" />
+    <dynamics damping="0.5" friction="1"/>
+  </joint>
+</robot>

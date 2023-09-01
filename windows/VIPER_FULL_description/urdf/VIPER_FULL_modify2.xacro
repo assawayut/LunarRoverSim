@@ -1,0 +1,691 @@
+<robot xmlns:ns0="http://www.ros.org/wiki/xacro" name="VIPER_FULL">
+
+<ns0:include filename="$(find VIPER_FULL_description)/urdf/materials.xacro" />
+<ns0:include filename="$(find VIPER_FULL_description)/urdf/VIPER_FULL.trans" />
+<ns0:include filename="$(find VIPER_FULL_description)/urdf/VIPER_FULL.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.0 -4.4327473630754506e-17 0.075" rpy="0 0 0" />
+    <mass value="40" />
+    <inertia ixx="1.7087250765673858" iyy="3.4116937823395377" izz="4.970465724679575" ixy="0.0" iyz="-0.0" ixz="0.0" />
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/base_link.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+    <material name="silver">
+      <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+    </material>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/base_link.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+  </collision>
+</link>
+
+<link name="RF_sus_link">
+  <inertial>
+    <origin xyz="0.0050000000000001155 -0.10491434460128557 -1.1889090892336363e-09" rpy="0 0 0" />
+    <mass value="6" />
+    <inertia ixx="0.023637633857563584" iyy="0.0005021652109345829" izz="0.023231119162997492" ixy="0.0" iyz="0.0" ixz="0.0" />
+  </inertial>
+  <visual>
+    <origin xyz="-0.5 0.25 -0.05" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/four_bar_1_v1_1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+    <material name="silver">
+      <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+    </material>
+  </visual>
+  <collision>
+    <origin xyz="-0.5 0.25 -0.05" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/four_bar_1_v1_1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+  </collision>
+</link>
+
+<link name="RF_sus_link3">
+  <inertial>
+    <origin xyz="0.0050000000000001155 -0.041730771756658236 0.024999998873365736" rpy="0 0 0" />
+    <mass value="2" />
+    <inertia ixx="0.003056831085609723" iyy="0.0009166507818647149" izz="0.002526767807400997" ixy="-0.0" iyz="0.0" ixz="0.0" />
+  </inertial>
+  <visual>
+    <origin xyz="-0.51 0.45 -0.05" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/four_bar_3_v1_1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+    <material name="silver">
+      <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+    </material>  </visual>
+  <collision>
+    <origin xyz="-0.51 0.45 -0.05" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/four_bar_3_v1_1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+  </collision>
+</link>
+
+<link name="RF_steer_link">
+  <inertial>
+    <origin xyz="0.0 -0.043780398271573095 -0.07074136486957122" rpy="0 0 0" />
+    <mass value="10" />
+    <inertia ixx="0.04448390282258499" iyy="0.016956184346695158" izz="0.028028475355693798" ixy="0.0" iyz="-0.000894" ixz="0.0" />
+  </inertial>
+  <visual>
+    <origin xyz="-0.515 0.515 -0.1" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/steer_joint_v12_1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+    <material name="silver">
+      <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+    </material>  </visual>
+  <collision>
+    <origin xyz="-0.515 0.515 -0.1" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/steer_joint_v12_1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+  </collision>
+</link>
+
+<link name="RF_wheel_link">
+  <inertial>
+    <origin xyz="2.6645352591003757e-15 3.673628068412427e-11 -2.5633041577126023e-08" rpy="0 0 0" />
+    <mass value="5" />
+    <inertia ixx="0.05279162213810622" iyy="0.10024977156931693" izz="0.05279162213810622" ixy="-0.0" iyz="-0.0" ixz="-0.0" />
+  </inertial>
+  <visual>
+    <origin xyz="-0.515 0.595 -0.000853" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/wheel_v11__2__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+    <material name="silver">
+      <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+    </material>  </visual>
+  <collision>
+    <origin xyz="-0.515 0.595 -0.000853" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/wheel_v11__2__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+  </collision>
+</link>
+
+<link name="RF_sus_link2">
+  <inertial>
+    <origin xyz="0.0050000000000001155 -0.10491434460128557 -1.1889090822947423e-09" rpy="0 0 0" />
+    <mass value="6" />
+    <inertia ixx="0.017925562566186503" iyy="0.00038081620019212597" izz="0.01761728278507859" ixy="0.0" iyz="0.0" ixz="0.0" />
+  </inertial>
+  <visual>
+    <origin xyz="-0.5 0.25 -0.1" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/four_bar_1_v1__1__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+    <material name="silver">
+      <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+    </material>  </visual>
+  <collision>
+    <origin xyz="-0.5 0.25 -0.1" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/four_bar_1_v1__1__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+  </collision>
+</link>
+
+<link name="LF_sus_link">
+  <inertial>
+    <origin xyz="0.0050000000000001155 0.10491434460128551 1.1889090684169545e-09" rpy="0 0 0" />
+    <mass value="6" />
+    <inertia ixx="0.023637633857563584" iyy="0.0005021652109345829" izz="0.023231119162997492" ixy="0.0" iyz="0.0" ixz="-0.0" />
+  </inertial>
+  <visual>
+    <origin xyz="-0.5 -0.25 -0.05" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/four_bar_1_v1__5__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+    <material name="silver">
+      <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+    </material>  </visual>
+  <collision>
+    <origin xyz="-0.5 -0.25 -0.05" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/four_bar_1_v1__5__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+  </collision>
+</link>
+
+<link name="LF_sus_link3">
+  <inertial>
+    <origin xyz="0.0050000000000001155 0.041730771756658236 0.025000001139803288" rpy="0 0 0" />
+    <mass value="2" />
+    <inertia ixx="0.003056831085609723" iyy="0.0009166507818647149" izz="0.002526767807400997" ixy="0.0" iyz="-0.0" ixz="0.0" />
+  </inertial>
+  <visual>
+    <origin xyz="-0.51 -0.45 -0.05" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/four_bar_3_v1__2__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+    <material name="silver">
+      <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+    </material>
+  </visual>
+  <collision>
+    <origin xyz="-0.51 -0.45 -0.05" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/four_bar_3_v1__2__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+  </collision>
+</link>
+
+<link name="LF_steer_link">
+  <inertial>
+    <origin xyz="3.3306690738754696e-16 0.043780398271572984 -0.07074136260313373" rpy="0 0 0" />
+    <mass value="10" />
+    <inertia ixx="0.04448390282258499" iyy="0.016956184346695158" izz="0.028028475355693798" ixy="0.0" iyz="0.000894" ixz="0.0" />
+  </inertial>
+  <visual>
+    <origin xyz="-0.515 -0.515 -0.1" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/steer_joint_v12__3__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+    <material name="silver">
+      <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+    </material>  </visual>
+  <collision>
+    <origin xyz="-0.515 -0.515 -0.1" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/steer_joint_v12__3__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+  </collision>
+</link>
+
+<link name="LF_wheel_link">
+  <inertial>
+    <origin xyz="2.7755575615628914e-15 -3.673650272872919e-11 -2.3366604085992525e-08" rpy="0 0 0" />
+    <mass value="5" />
+    <inertia ixx="0.05279162213810622" iyy="0.10024977156931693" izz="0.05279162213810622" ixy="0.0" iyz="0.0" ixz="-0.0" />
+  </inertial>
+  <visual>
+    <origin xyz="-0.515 -0.595 -0.000853" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/wheel_v11__3__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+    <material name="silver">
+      <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+    </material>  </visual>
+  <collision>
+    <origin xyz="-0.515 -0.595 -0.000853" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/wheel_v11__3__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+  </collision>
+</link>
+
+<link name="LF_sus_link2">
+  <inertial>
+    <origin xyz="0.0050000000000000044 0.10491434460128551 -1.1889090822947423e-09" rpy="0 0 0" />
+    <mass value="6" />
+    <inertia ixx="0.017925562566186503" iyy="0.00038081620019212597" izz="0.01761728278507859" ixy="-0.0" iyz="-0.0" ixz="0.0" />
+  </inertial>
+  <visual>
+    <origin xyz="-0.5 -0.25 -0.1" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/four_bar_1_v1__2__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+    <material name="silver">
+      <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+    </material>  </visual>
+  <collision>
+    <origin xyz="-0.5 -0.25 -0.1" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/four_bar_1_v1__2__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+  </collision>
+</link>
+
+<link name="LH_sus_link">
+  <inertial>
+    <origin xyz="-0.004999999999999893 0.10491434460128546 -1.1889090892336363e-09" rpy="0 0 0" />
+    <mass value="6" />
+    <inertia ixx="0.023637633857563584" iyy="0.0005021652109345829" izz="0.023231119162997492" ixy="0.0" iyz="-0.0" ixz="0.0" />
+  </inertial>
+  <visual>
+    <origin xyz="0.5 -0.25 -0.05" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/four_bar_1_v1__4__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+    <material name="silver">
+      <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+    </material>  </visual>
+  <collision>
+    <origin xyz="0.5 -0.25 -0.05" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/four_bar_1_v1__4__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+  </collision>
+</link>
+
+<link name="LH_sus_link3">
+  <inertial>
+    <origin xyz="-0.004999999999999893 0.041730771756658014 0.024999998873365722" rpy="0 0 0" />
+    <mass value="2" />
+    <inertia ixx="0.003056831085609723" iyy="0.0009166507818647149" izz="0.002526767807400997" ixy="0.0" iyz="-0.0" ixz="0.0" />
+  </inertial>
+  <visual>
+    <origin xyz="0.51 -0.45 -0.05" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/four_bar_3_v1__3__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+    <material name="silver">
+      <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+    </material>  </visual>
+  <collision>
+    <origin xyz="0.51 -0.45 -0.05" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/four_bar_3_v1__3__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+  </collision>
+</link>
+
+<link name="LH_steer_link">
+  <inertial>
+    <origin xyz="1.1102230246251565e-16 0.04378039827157276 -0.07074136486957125" rpy="0 0 0" />
+    <mass value="10" />
+    <inertia ixx="0.04448390282258499" iyy="0.016956184346695158" izz="0.028028475355693798" ixy="-0.0" iyz="0.000894" ixz="0.0" />
+  </inertial>
+  <visual>
+    <origin xyz="0.515 -0.515 -0.1" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/steer_joint_v12__2__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+    <material name="silver">
+      <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+    </material>  </visual>
+  <collision>
+    <origin xyz="0.515 -0.515 -0.1" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/steer_joint_v12__2__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+  </collision>
+</link>
+
+<link name="LH_wheel_link">
+  <inertial>
+    <origin xyz="2.55351295663786e-15 -3.673672477333412e-11 -2.5633041612471014e-08" rpy="0 0 0" />
+    <mass value="5" />
+    <inertia ixx="0.05279162213810622" iyy="0.10024977156931693" izz="0.05279162213810622" ixy="0.0" iyz="0.0" ixz="-0.0" />
+  </inertial>
+  <visual>
+    <origin xyz="0.515 -0.595 -0.000853" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/wheel_v11__1__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+    <material name="silver">
+      <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+    </material>  </visual>
+  <collision>
+    <origin xyz="0.515 -0.595 -0.000853" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/wheel_v11__1__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+  </collision>
+</link>
+
+<link name="LH_sus_link2">
+  <inertial>
+    <origin xyz="-0.0050000000000000044 0.10491434460128546 -1.1889090822947423e-09" rpy="0 0 0" />
+    <mass value="6" />
+    <inertia ixx="0.017925562566186503" iyy="0.00038081620019212597" izz="0.01761728278507859" ixy="0.0" iyz="-0.0" ixz="-0.0" />
+  </inertial>
+  <visual>
+    <origin xyz="0.5 -0.25 -0.1" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/four_bar_1_v1__3__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+    <material name="silver">
+      <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+    </material>  </visual>
+  <collision>
+    <origin xyz="0.5 -0.25 -0.1" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/four_bar_1_v1__3__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+  </collision>
+</link>
+
+<link name="RH_sus_link">
+  <inertial>
+    <origin xyz="-0.004999999999999893 -0.10491434460128557 1.1889090961725302e-09" rpy="0 0 0" />
+    <mass value="6" />
+    <inertia ixx="0.023637633857563584" iyy="0.0005021652109345829" izz="0.023231119162997492" ixy="-0.0" iyz="-0.0" ixz="0.0" />
+  </inertial>
+  <visual>
+    <origin xyz="0.5 0.25 -0.05" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/four_bar_1_v1__6__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+    <material name="silver">
+      <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+    </material>  </visual>
+  <collision>
+    <origin xyz="0.5 0.25 -0.05" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/four_bar_1_v1__6__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+  </collision>
+</link>
+
+<link name="RH_sus_link3">
+  <inertial>
+    <origin xyz="-0.004999999999999893 -0.041730771756658236 0.025000001139803357" rpy="0 0 0" />
+    <mass value="2" />
+    <inertia ixx="0.003056831085609723" iyy="0.0009166507818647149" izz="0.002526767807400997" ixy="0.0" iyz="0.0" ixz="0.0" />
+  </inertial>
+  <visual>
+    <origin xyz="0.51 0.45 -0.05" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/four_bar_3_v1__1__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+    <material name="silver">
+      <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+    </material>  </visual>
+  <collision>
+    <origin xyz="0.51 0.45 -0.05" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/four_bar_3_v1__1__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+  </collision>
+</link>
+
+<link name="RH_steer_link">
+  <inertial>
+    <origin xyz="1.1102230246251565e-16 -0.043780398271572984 -0.07074136260313361" rpy="0 0 0" />
+    <mass value="10" />
+    <inertia ixx="0.04448390282258499" iyy="0.016956184346695158" izz="0.028028475355693798" ixy="0.0" iyz="-0.000894" ixz="0.0" />
+  </inertial>
+  <visual>
+    <origin xyz="0.515 0.515 -0.1" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/steer_joint_v12__1__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+    <material name="silver">
+      <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+    </material>  </visual>
+  <collision>
+    <origin xyz="0.515 0.515 -0.1" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/steer_joint_v12__1__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+  </collision>
+</link>
+
+<link name="RH_wheel_link">
+  <inertial>
+    <origin xyz="2.6645352591003757e-15 3.673650272872919e-11 -2.336660396380294e-08" rpy="0 0 0" />
+    <mass value="5" />
+    <inertia ixx="0.05279162213810622" iyy="0.10024977156931693" izz="0.05279162213810622" ixy="-0.0" iyz="-0.0" ixz="-0.0" />
+  </inertial>
+  <visual>
+    <origin xyz="0.515 0.595 -0.000853" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/wheel_v11_1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+    <material name="silver">
+      <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+    </material>  </visual>
+  <collision>
+    <origin xyz="0.515 0.595 -0.000853" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/wheel_v11_1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+  </collision>
+</link>
+
+<link name="RH_sus_link2">
+  <inertial>
+    <origin xyz="-0.004999999999999893 -0.10491434460128557 1.1889090961725302e-09" rpy="0 0 0" />
+    <mass value="6" />
+    <inertia ixx="0.017925562566186503" iyy="0.00038081620019212597" izz="0.01761728278507859" ixy="-0.0" iyz="-0.0" ixz="-0.0" />
+  </inertial>
+  <visual>
+    <origin xyz="0.5 0.25 -0.1" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/four_bar_1_v1__7__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+    <material name="silver">
+      <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+    </material>  </visual>
+  <collision>
+    <origin xyz="0.5 0.25 -0.1" rpy="0 0 0" />
+    <geometry>
+      <mesh filename="package://VIPER_FULL_description/meshes/four_bar_1_v1__7__1.stl" scale="0.001 0.001 0.001" />
+    </geometry>
+  </collision>
+</link>
+
+<link name="dummy_link1">
+</link>
+
+<link name="dummy_link2">
+</link>
+
+<link name="dummy_link3">
+</link>
+
+<link name="dummy_link4">
+</link>
+
+
+<joint name="RF_sus_joint" type="revolute">
+  <origin xyz="0.5 -0.25 0.05" rpy="0 0 0" />
+  <parent link="base_link" />
+  <child link="RF_sus_link" />
+  <axis xyz="1.0 0.0 0.0" />
+  <limit upper="0.5235987755982988" lower="-0.5235987755982988" />
+  <limit effort="1" velocity="1" />
+   <dynamics damping="0.1" friction="0.5" />
+</joint>
+
+<joint name="RF_sus_joint_fixed" type="continuous">
+  <origin xyz="0.01 -0.2 0.0" rpy="0 0 0" />
+  <parent link="RF_sus_link" />
+  <child link="RF_sus_link3" />
+  <axis xyz="1.0 0.0 0.0" />
+</joint>
+
+<joint name="RF_steer_joint" type="revolute">
+  <origin xyz="0.005 -0.065 0.05" rpy="0 0 0" />
+  <parent link="RF_sus_link3" />
+  <child link="RF_steer_link" />
+  <axis xyz="-0.0 -0.0 -1.0" />
+    <limit lower="-0.2" upper="0.2" effort="10" velocity="10" />
+    <dynamics damping="1" friction="5" />
+</joint>
+
+<joint name="RF_wheel_joint" type="revolute">
+  <origin xyz="0.0 -0.08 -0.099147" rpy="0 0 0" />
+  <parent link="RF_steer_link" />
+  <child link="RF_wheel_link" />
+  <axis xyz="0.0 -1.0 0.0" />
+  <limit effort="100" velocity="100" />
+   <dynamics damping="0.5" friction="1" />
+</joint>
+
+<joint name="RF_sus_joint_2" type="revolute">
+  <origin xyz="0.5 -0.25 0.1" rpy="0 0 0" />
+  <parent link="base_link" />
+  <child link="RF_sus_link2" />
+  <axis xyz="-1.0 0.0 0.0" />
+  <limit upper="0.5235987755982988" lower="-0.5235987755982988" />
+  <limit effort="1" velocity="1" />
+   <dynamics damping="0.1" friction="0.5" />
+</joint>
+
+<joint name="LF_sus_joint" type="revolute">
+  <origin xyz="0.5 0.25 0.05" rpy="0 0 0" />
+  <parent link="base_link" />
+  <child link="LF_sus_link" />
+  <axis xyz="1.0 -0.0 0.0" />
+  <limit upper="0.5235987755982988" lower="-0.5235987755982988" />
+  <limit effort="5" velocity="1" />
+   <dynamics damping="0.5" friction="1" />
+</joint>
+
+<joint name="LF_sus_joint_fixed" type="continuous">
+  <origin xyz="0.01 0.2 0.0" rpy="0 0 0" />
+  <parent link="LF_sus_link" />
+  <child link="LF_sus_link3" />
+  <axis xyz="1.0 -0.0 0.0" />
+</joint>
+
+<joint name="LF_steer_joint" type="revolute">
+  <origin xyz="0.005 0.065 0.05" rpy="0 0 0" />
+  <parent link="LF_sus_link3" />
+  <child link="LF_steer_link" />
+  <axis xyz="0.0 0.0 -1.0" />
+    <limit lower="-0.2" upper="0.2" effort="10" velocity="10" />
+    <dynamics damping="1" friction="5" />
+</joint>
+
+<joint name="LF_wheel_joint" type="revolute">
+  <origin xyz="0.0 0.08 -0.099147" rpy="0 0 0" />
+  <parent link="LF_steer_link" />
+  <child link="LF_wheel_link" />
+  <axis xyz="0.0 1.0 0.0" />
+  <limit effort="100" velocity="100" />
+   <dynamics damping="0.5" friction="1" />
+</joint>
+
+<joint name="LF_sus_joint_2" type="revolute">
+  <origin xyz="0.5 0.25 0.1" rpy="0 0 0" />
+  <parent link="base_link" />
+  <child link="LF_sus_link2" />
+  <axis xyz="1.0 -0.0 0.0" />
+  <limit upper="0.5235987755982988" lower="-0.5235987755982988" />
+  <limit effort="1" velocity="1" />
+   <dynamics damping="0.1" friction="0.5" />
+</joint>
+
+<joint name="LH_sus_joint" type="revolute">
+  <origin xyz="-0.5 0.25 0.05" rpy="0 0 0" />
+  <parent link="base_link" />
+  <child link="LH_sus_link" />
+  <axis xyz="1.0 0.0 0.0" />
+  <limit upper="0.5235987755982988" lower="-0.5235987755982988" />
+  <limit effort="5" velocity="1" />
+   <dynamics damping="0.5" friction="1" />
+</joint>
+
+<joint name="LH_sus_joint_fixed" type="continuous">
+  <origin xyz="-0.01 0.2 0.0" rpy="0 0 0" />
+  <parent link="LH_sus_link" />
+  <child link="LH_sus_link3" />
+  <axis xyz="-1.0 0.0 0.0" />
+</joint>
+
+<joint name="LH_steer_joint" type="revolute">
+  <origin xyz="-0.005 0.065 0.05" rpy="0 0 0" />
+  <parent link="LH_sus_link3" />
+  <child link="LH_steer_link" />
+  <axis xyz="0.0 0.0 -1.0" />
+    <limit lower="-0.2" upper="0.2" effort="10" velocity="10" />
+    <dynamics damping="1" friction="5" />
+</joint>
+
+<joint name="LH_wheel_joint" type="revolute">
+  <origin xyz="0.0 0.08 -0.099147" rpy="0 0 0" />
+  <parent link="LH_steer_link" />
+  <child link="LH_wheel_link" />
+  <axis xyz="-0.0 1.0 0.0" />
+  <limit effort="100" velocity="100" />
+   <dynamics damping="0.5" friction="1" />
+</joint>
+
+<joint name="LH_sus_joint_2" type="continuous">
+  <origin xyz="-0.5 0.25 0.1" rpy="0 0 0" />
+  <parent link="base_link" />
+  <child link="LH_sus_link2" />
+  <axis xyz="1.0 0.0 0.0" />
+  <limit upper="0.5235987755982988" lower="-0.5235987755982988" />
+  <limit effort="1" velocity="1" />
+   <dynamics damping="0.1" friction="0.5" />
+</joint>
+
+<joint name="RH_sus_joint" type="revolute">
+  <origin xyz="-0.5 -0.25 0.05" rpy="0 0 0" />
+  <parent link="base_link" />
+  <child link="RH_sus_link" />
+  <axis xyz="1.0 0.0 0.0" />
+  <limit upper="0.5235987755982988" lower="-0.5235987755982988" />
+  <limit effort="5" velocity="1" />
+   <dynamics damping="0.5" friction="1" />
+</joint>
+
+<joint name="RH_sus_joint_fixed" type="continuous">
+  <origin xyz="-0.01 -0.2 0.0" rpy="0 0 0" />
+  <parent link="RH_sus_link" />
+  <child link="RH_sus_link3" />
+  <axis xyz="-1.0 0.0 0.0" />
+</joint>
+
+<joint name="RH_steer_joint" type="revolute">
+  <origin xyz="-0.005 -0.065 0.05" rpy="0 0 0" />
+  <parent link="RH_sus_link3" />
+  <child link="RH_steer_link" />
+  <axis xyz="-0.0 -0.0 -1.0" />
+  <limit upper="0.5236" lower="-0.5236" />
+    <limit lower="-0.2" upper="0.2" effort="10" velocity="10" />
+    <dynamics damping="1" friction="5" />
+</joint>
+
+<joint name="RH_wheel_joint" type="revolute">
+  <origin xyz="0.0 -0.08 -0.099147" rpy="0 0 0" />
+  <parent link="RH_steer_link" />
+  <child link="RH_wheel_link" />
+  <axis xyz="0.0 -1.0 0.0" />
+  <limit effort="100" velocity="100" />
+   <dynamics damping="0.5" friction="1" />
+</joint>
+
+<joint name="RH_sus_joint_2" type="continuous">
+  <origin xyz="-0.5 -0.25 0.1" rpy="0 0 0" />
+  <parent link="base_link" />
+  <child link="RH_sus_link2" />
+  <axis xyz="1.0 0.0 0.0" />
+  <limit upper="0.5235987755982988" lower="-0.5235987755982988" />
+  <limit effort="1" velocity="1" />
+   <dynamics damping="0.1" friction="0.5" />
+</joint>
+
+<joint name="dummy_joint1" type="fixed">
+  <origin xyz="0 -0.2 0" rpy="0 0 0" />
+  <parent link="RF_sus_link2" />
+  <child link="dummy_link1" />
+</joint>
+
+<joint name="dummy_joint2" type="fixed">
+  <origin xyz="0 0.2 0" rpy="0 0 0" />
+  <parent link="LF_sus_link2" />
+  <child link="dummy_link2" />
+</joint>
+
+
+<joint name="dummy_joint3" type="fixed">
+  <origin xyz="0 0.2 0" rpy="0 0 0" />
+  <parent link="LH_sus_link2" />
+  <child link="dummy_link3" />
+</joint>
+
+
+<joint name="dummy_joint4" type="fixed">
+  <origin xyz="0 -0.2 0" rpy="0 0 0" />
+  <parent link="RH_sus_link2" />
+  <child link="dummy_link4" />
+</joint>
+
+</robot>
