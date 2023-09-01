@@ -54,9 +54,13 @@ To change the values of lunar environment parameter, go to `param_config.yaml` a
 There are currently two control modes; *Individual motors control* and *Differential drive control*. TO change the mode, go to `init_config.yaml` and change the number after `control_mode`
 
 ## Logger
+### State
+The state of rover base and all joint will be logged into the text file named `state_logger_<rover_name>.txt`. Inside the file, each line represents the state in the form of [simulation time, position, orientation, linear velocity, angular velocity, position and velocity of each joint]. The option to enable/disable state logger can be adjusted via GUI.
 
+### Camera
+Three types of images from camera sensor; RGB, Depth, Segmentation, are logged to folder name `/logger_img/<rover_name>/<imag_type>`, and only logged after both `Camera` and `Camera logger` GUIs are enable (to prevent the elongation of simulation time step)
 
 ## TODO
-- Logger for the state of rover
+- Check the type of logged images again
 - Test on Windows OS -> Works fine for Windows 10
 
