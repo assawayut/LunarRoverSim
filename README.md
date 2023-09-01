@@ -14,17 +14,24 @@ git clone https://github.com/assawayut/LunarRoverSim.git
 cd linux
 ```
 
+Windows (tested on x64 Windows 10)
+```sh
+# clone from window branch
+git clone --branch window https://github.com/assawayut/LunarRoverSim.git
+cd windows
+```
+
 ## Usage
 ### LUVMI-X model
 ```sh
-cd linux
-./main_luvmix
+cd linux # (Windows) cd windows
+./main_luvmix # (Windows) double click on main_luvmix.exe
 ```
 
 ### VIPER model
 ```sh
-cd linux
-./main_viper
+cd linux # (Windows) cd windows
+./main_viper # (Windows) double click on main_viper.exe
 ```
 
 ## Interface
@@ -44,6 +51,10 @@ To change the values of lunar environment parameter, go to `param_config.yaml` a
 
 There are currently two control modes; *Individual motors control* and *Differential drive control*. TO change the mode, go to `init_config.yaml` and change the number after `control_mode`
 
+## Logger
+
+
 ## TODO
 - Logger for the state of rover
-- Test on Windows OS
+- Test on Windows OS -> Works fine for Windows 10
+
