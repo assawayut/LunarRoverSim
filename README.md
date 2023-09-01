@@ -37,6 +37,8 @@ cd linux # (Windows) cd windows
 ## Interface
 Simulator GUI consists of the option to enable/disable each lunar environmental effect, the slider bars for applied torques, and the option to use camera sensors.
 
+To enable each environmental effect, move the corresponding slider bar to "1". For the temperature, the value of ambient temperature can also be adjusted through slider bar.
+
 <img src="figure/env_gui.png" width=200> <img src="figure/motor_gui.png" width=200 height=263>
 
 
